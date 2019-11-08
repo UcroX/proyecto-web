@@ -6,9 +6,9 @@ $(document).ready(function () {
     $(document).off("scroll");
 
     $('nav a').each(function () {
-      $(this).removeClass('active');
+      $(this).removeClass('active-button');
     })
-    $(this).addClass('active');
+    $(this).addClass('active-button');
 
     var target = this.hash;
     $target = $(target);
@@ -27,11 +27,11 @@ function onScroll(event){
     var currentLink = $(this);
     var refElement = $(currentLink.attr("href"));
     if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-      $('nav a').removeClass("active");
-      currentLink.addClass("active");
+      $('nav a').removeClass("active-button");
+      currentLink.addClass("active-button");
     }
     else{
-      currentLink.removeClass("active");
+      currentLink.removeClass("active-button");
     }
   });
 }
